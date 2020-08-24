@@ -1,0 +1,140 @@
+ body {
+     background-color: wheat;
+     color: white;
+     min-height: 100vh;
+     margin: 0 100px;
+     position: relative;
+     font-family: 'Times New Roman', Times, serif;
+ }
+ 
+ header {
+     font-size: 1.5rem;
+ }
+ 
+ header,
+ form {
+     min-height: 15vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ form input,
+ form button {
+     padding: 0.5rem;
+     font-size: 1.5rem;
+     border: none;
+     background: white;
+ }
+ 
+ form button {
+     color: #d88771;
+     background: white;
+     cursor: pointer;
+     transition: all 0.3s ease;
+ }
+ 
+ form button :hover {
+     box-shadow: 5px orange;
+     border-bottom: 2px solid orange;
+ }
+ 
+ .todo-container {
+     justify-content: center;
+     align-items: center;
+     display: flex;
+ }
+ 
+ .todo-list {
+     min-width: 35%;
+ }
+ 
+ .todo {
+     background-color: transparent;
+     border-bottom: 1px solid grey;
+     color: black;
+     font-size: 1.5rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ .todo li {
+     flex: 1;
+ }
+ 
+ .trash-btn,
+ .complete-btn,
+ .reset-btn {
+     background: red;
+     color: white;
+     border: none;
+     padding: 5px;
+     margin-left: 2px;
+ }
+ 
+ .complete-btn {
+     background: green;
+ }
+ 
+ .reset-btn {
+     background: navy;
+ }
+ 
+ .trash-btn :hover,
+ .complete-btn :hover,
+ .reset-btn :hover {
+     color: black;
+ }
+ 
+ .select {
+     margin-right: 0;
+     padding: 10px;
+     position: absolute;
+     right: 50px;
+     z-index: 1;
+ }
+ 
+ .filter-todo {
+     border: none;
+     border-bottom: 2px solid orange;
+     height: 40px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ 
+ .fa-trash,
+ .fa-check {
+     pointer-events: none;
+ }
+ 
+ .fall {
+     transform: translateY(8rem) rotateZ(360deg);
+     opacity: 0;
+     transition: 1.5s;
+ }
+ 
+ .completed {
+     opacity: 0.5;
+ }
+ 
+ .todo-list {
+     border: 0.5px solid black;
+     border-radius: 5px;
+     grid-template-columns: 80% auto;
+     max-height: 250px;
+     overflow: auto;
+ }
+ 
+ ::-webkit-scrollbar {
+     width: 10px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+     background-color: rgb(161, 224, 224);
+     box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 55);
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+     height: 10px;
+     background: linear-gradient( 45deg, pink, magenta);
+ }
